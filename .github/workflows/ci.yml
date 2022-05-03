@@ -50,6 +50,8 @@ jobs:
           VITE_BASE_PUBLIC_PATH: ${{ secrets.VITE_BASE_PUBLIC_PATH }}
         run: npm run build
 
+      - name: copy
+        run: cp dist/index.html dist/404.html
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
