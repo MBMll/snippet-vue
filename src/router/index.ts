@@ -3,7 +3,7 @@ const routes = [
   { path: '/', component: () => import('@/components/HelloWorld.vue') },
   {
     path: '/config/initProject',
-    component: () => import('@/views/config/initProject.md')
+    component: () => import('@/views/config/InitProject.md')
   }
 ]
 
