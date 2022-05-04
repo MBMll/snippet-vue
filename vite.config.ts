@@ -6,12 +6,15 @@ import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver, VueUseComponentsResolver } from 'unplugin-vue-components/resolvers'
 import WindiCSS from 'vite-plugin-windicss'
 import Markdown from 'vite-plugin-md'
+import Pages from 'vite-plugin-pages'
 import Prism from 'markdown-it-prism'
 
 const defaultClasses = 'prose prose-sm m-auto text-left'
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, `.env.${mode}`)
+  const env = loadEnv(mode, process.cwd())
+  console.log(process.env.VITE_BASE_PUBLIC_PATH, env.VITE_BASE_PUBLIC_PATH, env,mode,process.cwd())
+  process.env.VITE_BASE_PUBLIC_PATH = process.env.VITE_BASE_PUBLIC_PATH || env.VITE_BASE_PUBLIC_PATH
   return {
     base: env.VITE_BASE_PUBLIC_PATH,
     resolve: {
@@ -30,7 +33,7 @@ export default defineConfig(({ mode }) => {
         dts: './components.d.ts',
         extensions: ['vue', 'md'],
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-        dirs: ['src/components/', 'src/views', 'src/router'],
+        dirs: ['src/components/', 'src/views'],
         resolvers: [NaiveUiResolver(), VueUseComponentsResolver()]
       }),
       WindiCSS({
@@ -51,6 +54,12 @@ export default defineConfig(({ mode }) => {
         //   },
         // });
         }
+      }),
+      Pages({
+        dirs: [{ dir: 'src/views', baseRoute: process.env.VITE_BASE_PUBLIC_PATH }],
+
+        extensions: ['vue', 'md'],
+        exclude: ['**/__*__.vue']
       })]
   }
 })

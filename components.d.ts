@@ -5,8 +5,11 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    404: typeof import('./src/views/404/index.vue')['default']
+    AliveRouterView: typeof import('./src/components/AliveRouterView.vue')['default']
+    Docs: typeof import('./src/views/docs.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    InitProject: typeof import('./src/views/config/InitProject.md')['default']
+    InitProject: typeof import('./src/views/docs/config/init-project.md')['default']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

@@ -12,3 +12,7 @@ declare module '*.md' {
   const component: DefineComponent<{}, {}, any>;
   export default component;
 }
+
+
+// vite-env.d.ts
+/// <reference types="vite-plugin-pages/client" />

@@ -2,15 +2,14 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 // import HelloWorld from './components/HelloWorld.vue'
+const x = null
 </script>
 
 <template>
   <n-config-provider>
-  <router-view v-slot="{Component}">
-    <keep-alive :max="9">
-      <component :is="Component"></component>
-    </keep-alive>
-  </router-view>
+       <alive-router-view
+
+       />
   </n-config-provider>
 </template>
 
