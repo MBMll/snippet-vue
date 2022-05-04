@@ -13,7 +13,7 @@ const defaultClasses = 'prose prose-sm m-auto text-left'
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
-  console.log(process.env.VITE_BASE_PUBLIC_PATH, env.VITE_BASE_PUBLIC_PATH, env,mode,process.cwd())
+  console.log(process.env.VITE_BASE_PUBLIC_PATH, env.VITE_BASE_PUBLIC_PATH, env, mode, process.cwd())
   process.env.VITE_BASE_PUBLIC_PATH = process.env.VITE_BASE_PUBLIC_PATH || env.VITE_BASE_PUBLIC_PATH
   return {
     base: env.VITE_BASE_PUBLIC_PATH,
@@ -56,8 +56,15 @@ export default defineConfig(({ mode }) => {
         }
       }),
       Pages({
-        dirs: [{ dir: 'src/views', baseRoute: process.env.VITE_BASE_PUBLIC_PATH }],
-
+        dirs: [{
+          dir: 'src/views',
+          // baseRoute: process.env.VITE_BASE_PUBLIC_PATH
+          baseRoute: ''
+        }],
+        // extendRoute (route, parent) {
+        //   console.log(route, parent)
+        //   return { ...route, label: route.name }
+        // },
         extensions: ['vue', 'md'],
         exclude: ['**/__*__.vue']
       })]
