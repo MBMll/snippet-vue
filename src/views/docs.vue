@@ -29,14 +29,14 @@ export default {
 
 <script lang="ts" setup>
 import router from '@/router'
-import {RouterLink} from 'vue-router'
+import { RouterLink } from 'vue-router'
 
 const route = useRoute()
 const activeMenu = computed(() => toRaw(route.name))
 const routes = router.options.routes
 const deepRender = (routes) => {
-  routes.forEach(r => {
-    r.label = () => h(RouterLink, { to: { name: r.name } }, ()=>r.name)
+  routes.forEach((r:any) => {
+    r.label = () => h(RouterLink, { to: { name: r.name } }, () => r.name)
     if (r?.children) {
       deepRender(r.children)
     }

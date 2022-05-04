@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vue-tsc --noEmit --skipLibCheck && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -40,5 +40,10 @@
     "vite-plugin-pages": "^0.23.0",
     "vite-plugin-windicss": "^1.8.4",
     "vue-tsc": "^0.34.7"
+  },
+  "lint-staged": {
+    "*.{ts,js,vue}": [
+      "eslint"
+    ]
   }
 }

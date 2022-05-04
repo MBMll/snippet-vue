@@ -27,7 +27,12 @@ export default defineConfig(({ mode }) => {
       AutoImport({
         dts: './auto-imports.d.ts',
         // include: [/\.vue$/, /\.md$/],
-        imports: ['vue', 'vue-router', 'vue-i18n']
+        imports: ['vue', 'vue-router', 'vue-i18n'],
+        eslintrc: {
+          enabled: false, // Default `false`
+          filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
+          globalsPropValue: true // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
+        }
       }),
       Components({
         dts: './components.d.ts',
