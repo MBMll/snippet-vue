@@ -32,8 +32,8 @@
     import { RouterLink } from 'vue-router'
 
     const route = useRoute()
-    const activeMenu = computed(() => toRaw(route.name))
-    const routes = router.options.routes
+    const activeMenu:any = computed(() => toRaw(route.name))
+    const routes:any = router.options.routes
     const deepRender = (routes: Array<any>) => {
         routes.forEach((r: any) => {
             r.label = () => h(RouterLink, { to: { name: r.name } }, () => r.name)
