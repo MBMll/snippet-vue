@@ -1,5 +1,6 @@
 {
   "globals": {
+    "axios": true,
     "computed": true,
     "createApp": true,
     "customRef": true,
@@ -45,6 +46,8 @@
     "useCssModule": true,
     "useCssVars": true,
     "useI18n": true,
+    "useMouse": true,
+    "useMyFetch": true,
     "useRoute": true,
     "useRouter": true,
     "useSlots": true,

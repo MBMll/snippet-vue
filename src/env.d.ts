@@ -1,4 +1,8 @@
 /// <reference types="vite/client" />
+// vite-env.d.ts
+/// <reference types="vite-plugin-pages/client" />
+
+// reference must be on the top of file.
 
 declare module '*.vue' {
   import type { DefineComponent } from 'vue'
@@ -13,6 +17,3 @@ declare module '*.md' {
   export default component;
 }
 
-
-// vite-env.d.ts
-/// <reference types="vite-plugin-pages/client" />
