@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import routes from '~pages'
-import routes from 'virtual:generated-pages'
+import routes from '~pages'
+// import routes from 'virtual:generated-pages'
 
 routes.push({
   path: '/:pathMatch(.*)',
