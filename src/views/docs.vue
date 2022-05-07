@@ -1,5 +1,5 @@
 <template>
-    <n-layout>
+    <n-layout style="height: 100vh">
         <n-layout-header></n-layout-header>
         <n-layout has-sider>
             <n-layout-sider
@@ -8,6 +8,7 @@
                 :native-scrollbar="false"
                 show-trigger="bar"
                 collapse-mode="transform"
+                :show-collapsed-content="false"
                 :collapsed-width="120"
             >
                 <n-scrollbar>
@@ -32,15 +33,19 @@
     import { RouterLink } from 'vue-router'
 
     const route = useRoute()
-    const activeMenu:any = computed(() => toRaw(route.name))
-    const routes:any = router.options.routes
+    const activeMenu: any = computed(() => toRaw(route.name))
+    const hiddenList: Array<string> = ['404', 'path-match']
     const deepRender = (routes: Array<any>) => {
-        routes.forEach((r: any) => {
-            r.label = () => h(RouterLink, { to: { name: r.name } }, () => r.name)
-            if (r?.children) {
-                deepRender(r.children)
-            }
-        })
+        return routes
+            .filter((e: any) => !hiddenList.includes(e.name))
+            .map((r: any) =>
+                Object.assign({}, r, {
+                    label: () =>
+                        h(RouterLink, { to: { name: r.name } }, () => r.name || r.path.substr(1)),
+                    children: Array.isArray(r?.children) ? deepRender(r.children) : null
+                })
+            )
     }
-    deepRender(routes)
+    const routes: any = deepRender(router.options.routes)
+    console.log(routes)
 </script>

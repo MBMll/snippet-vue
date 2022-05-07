@@ -10,6 +10,8 @@ npm init @eslint/config
 npm i naive-ui
 npm i vue-i18n
 npm i prism-theme-vars
+
+npm i -D @vicons/fluent
 npm i -D @intlify/vite-plugin-vue-i18n
 npm i -D unplugin-auto-import
 npm i -D unplugin-vue-components

@@ -4,22 +4,26 @@
 import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
-  export interface GlobalComponents {
-    404: typeof import('./src/views/404/index.vue')['default']
-    AliveRouterView: typeof import('./src/components/AliveRouterView.vue')['default']
-    Docs: typeof import('./src/views/docs.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    InitProject: typeof import('./src/views/docs/config/init-project.md')['default']
-    NConfigProvider: typeof import('naive-ui')['NConfigProvider']
-    NLayout: typeof import('naive-ui')['NLayout']
-    NLayoutContent: typeof import('naive-ui')['NLayoutContent']
-    NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
-    NLayoutSider: typeof import('naive-ui')['NLayoutSider']
-    NMenu: typeof import('naive-ui')['NMenu']
-    NScrollbar: typeof import('naive-ui')['NScrollbar']
-    RouterLink: typeof import('vue-router')['RouterLink']
-    RouterView: typeof import('vue-router')['RouterView']
-  }
+    export interface GlobalComponents {
+        404: typeof import('./src/views/404/index.vue')['default']
+        AliveRouterView: typeof import('./src/components/AliveRouterView.vue')['default']
+        Docs: typeof import('./src/views/docs.vue')['default']
+        HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+        InitProject: typeof import('./src/views/docs/config/init-project.md')['default']
+        NA: typeof import('naive-ui')['NA']
+        NConfigProvider: typeof import('naive-ui')['NConfigProvider']
+        NIcon: typeof import('naive-ui')['NIcon']
+        NLayout: typeof import('naive-ui')['NLayout']
+        NLayoutContent: typeof import('naive-ui')['NLayoutContent']
+        NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
+        NLayoutSider: typeof import('naive-ui')['NLayoutSider']
+        NList: typeof import('naive-ui')['NList']
+        NListItem: typeof import('naive-ui')['NListItem']
+        NMenu: typeof import('naive-ui')['NMenu']
+        NScrollbar: typeof import('naive-ui')['NScrollbar']
+        RouterLink: typeof import('vue-router')['RouterLink']
+        RouterView: typeof import('vue-router')['RouterView']
+    }
 }
 
 export {}

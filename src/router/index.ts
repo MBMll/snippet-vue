@@ -4,6 +4,7 @@ import routes from '~pages'
 
 routes.push({
   path: '/:pathMatch(.*)',
+  name: 'path-match',
   // redirect: '/404'
   component: () => import('@/views/404/index.vue')
 })
