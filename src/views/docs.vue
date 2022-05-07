@@ -35,7 +35,7 @@
     const route = useRoute()
     const activeMenu: any = computed(() => toRaw(route.name))
     const hiddenList: Array<string> = ['404', 'path-match']
-    const deepRender = (routes: Array<any>) => {
+    const deepRender = (routes: Array<any>): Array<any> => {
         return routes
             .filter((e: any) => !hiddenList.includes(e.name))
             .map((r: any) =>
