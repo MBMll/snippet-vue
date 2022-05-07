@@ -1,4 +1,4 @@
-import{ah as s,ad as t,ai as a}from"./index-6a0df274.js";const p={class:"prose prose-sm m-auto text-left"},e=a(`<h3>\u521D\u59CB\u5316\u9879\u76EE</h3><pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> create vite@latest
+import{ah as s,a9 as t,ao as a}from"./index-b18cc1ff.js";const p={class:"prose prose-sm m-auto text-left"},e=a(`<h3>\u521D\u59CB\u5316\u9879\u76EE</h3><pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> create vite@latest
 
 npx eslint --init
 <span class="token comment">#  or </span>
@@ -7,6 +7,8 @@ npx eslint --init
 <span class="token function">npm</span> i naive-ui
 <span class="token function">npm</span> i vue-i18n
 <span class="token function">npm</span> i prism-theme-vars
+
+<span class="token function">npm</span> i -D @vicons/fluent
 <span class="token function">npm</span> i -D @intlify/vite-plugin-vue-i18n
 <span class="token function">npm</span> i -D unplugin-auto-import
 <span class="token function">npm</span> i -D unplugin-vue-components
