@@ -1,4 +1,4 @@
-import{ah as s,a9 as t,ao as a}from"./index-b18cc1ff.js";const p={class:"prose prose-sm m-auto text-left"},e=a(`<h3>\u521D\u59CB\u5316\u9879\u76EE</h3><pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> create vite@latest
+import{a6 as s,ah as t,ao as a}from"./index-a970fb9b.js";const p={class:"prose prose-sm m-auto text-left"},e=a(`<h3>\u521D\u59CB\u5316\u9879\u76EE</h3><pre class="language-bash"><code class="language-bash"><span class="token function">npm</span> create vite@latest
 
 npx eslint --init
 <span class="token comment">#  or </span>
@@ -21,4 +21,4 @@ npx eslint --init
 
 <span class="token function">npm</span> run dev
 
-</code></pre>`,2),i=[e],m={},r={setup(o,{expose:n}){return n({frontmatter:{}}),(c,l)=>(t(),s("div",p,i))}};export{r as default,m as frontmatter};
+</code></pre>`,2),i=[e],m={},r={setup(o,{expose:n}){return n({frontmatter:{}}),(c,l)=>(s(),t("div",p,i))}};export{r as default,m as frontmatter};
