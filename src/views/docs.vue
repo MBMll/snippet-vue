@@ -3,6 +3,7 @@
         <n-layout-header></n-layout-header>
         <n-layout has-sider>
             <n-layout-sider
+                v-model:collapsed="collapsedRef"
                 content-style="padding: 24px;"
                 style="margin-right: 32px"
                 :native-scrollbar="false"
@@ -12,11 +13,27 @@
                 :collapsed-width="120"
             >
                 <n-scrollbar>
-                    <n-menu :value="activeMenu" :options="routes"></n-menu>
+                    <n-menu
+                        :value="activeMenu"
+                        :collapsed="collapsedRef"
+                        :options="routes"
+                        style="width: 100%"
+                    />
                 </n-scrollbar>
             </n-layout-sider>
-            <n-layout-content>
-                <alive-router-view></alive-router-view>
+            <n-layout-content
+                style="padding: 30px; width: 100%; height: 100vh; background: #efefef"
+                :native-scrollbar="false"
+            >
+                <n-card
+                    hoverable
+                    embedded
+                    :bordered="false"
+                    content-style="margin: 30px;"
+                    style="border-radius: 30px"
+                >
+                    <alive-router-view></alive-router-view>
+                </n-card>
             </n-layout-content>
         </n-layout>
     </n-layout>
@@ -32,6 +49,7 @@
     import router from '@/router'
     import { RouterLink } from 'vue-router'
 
+    const collapsedRef = ref(false)
     const route = useRoute()
     const activeMenu: any = computed(() => toRaw(route.name))
     const hiddenList: Array<string> = ['404', 'path-match']
