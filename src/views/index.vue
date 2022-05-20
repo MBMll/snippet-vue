@@ -8,13 +8,14 @@
 </template>
 
 <script lang="ts" setup>
+    import { Component } from 'vue'
     import { RouterLink } from 'vue-router'
-    import { NIcon } from 'naive-ui'
+    import { NIcon, MenuOption } from 'naive-ui'
     import { Book24Filled, Toolbox24Filled } from '@vicons/fluent'
 
     const activeKey = ref<string | null>(null)
     const renderIcon = (icon: Component) => () => h(NIcon, null, { default: () => h(icon) })
-    const menuOptions: MenuOptions[] = [
+    const menuOptions: MenuOption[] = [
         {
             label: () => h(RouterLink, { to: { path: '/books' } }, 'books'),
             key: 'books',

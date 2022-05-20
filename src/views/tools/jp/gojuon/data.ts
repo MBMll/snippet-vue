@@ -1,4 +1,4 @@
-export const sounds = {
+export const sounds: any = {
     voiceless: [
         { h: 'あ', k: 'ア', r: 'a' },
         { h: 'い', k: 'イ', r: 'i' },
