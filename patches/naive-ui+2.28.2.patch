@@ -1,0 +1,12 @@
+diff --git a/node_modules/naive-ui/es/checkbox/src/Checkbox.js b/node_modules/naive-ui/es/checkbox/src/Checkbox.js
+index a833fbc..ed69f2d 100644
+--- a/node_modules/naive-ui/es/checkbox/src/Checkbox.js
++++ b/node_modules/naive-ui/es/checkbox/src/Checkbox.js
+@@ -110,6 +110,7 @@ export default defineComponent({
+         });
+         const themeRef = useTheme('Checkbox', '-checkbox', style, checkboxLight, props, mergedClsPrefixRef);
+         function toggle(e) {
++            console.log(e)
+             if (NCheckboxGroup && props.value !== undefined) {
+                 NCheckboxGroup.toggleCheckbox(!renderedCheckedRef.value, props.value);
+             }
