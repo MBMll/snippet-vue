@@ -1,4 +1,4 @@
-import{o as n,a2 as a,ac as t}from"./index-26a53937.js";const p={class:"prose prose-sm m-auto text-left"},o=t(`<h3>\u66F4\u6539\u5305\u884C\u4E3A</h3><h4>init patch-package</h4><pre class="language-bash"><code class="language-bash">
+import{o as n,$ as a,ac as t}from"./index-14d43fb4.js";const p={class:"prose prose-sm m-auto text-left"},o=t(`<h3>\u66F4\u6539\u5305\u884C\u4E3A</h3><h4>init patch-package</h4><pre class="language-bash"><code class="language-bash">
 <span class="token function">npm</span> i -D patch-package
 
 <span class="token comment"># edit /node_modules/naive-ui/es/checkbox/src/Checkbox.js</span>
