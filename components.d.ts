@@ -7,6 +7,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     404: typeof import('./src/views/404/index.vue')['default']
     AliveRouterView: typeof import('./src/components/AliveRouterView.vue')['default']
+    Decimal_js: typeof import('./src/views/tools/math/decimal_js/index.vue')['default']
     Docs: typeof import('./src/views/docs.vue')['default']
     Gojuon: typeof import('./src/views/tools/jp/gojuon/index.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
@@ -17,7 +18,10 @@ declare module '@vue/runtime-core' {
     NCheckbox: typeof import('naive-ui')['NCheckbox']
     NCheckboxGroup: typeof import('naive-ui')['NCheckboxGroup']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
+    NForm: typeof import('naive-ui')['NForm']
+    NFormItem: typeof import('naive-ui')['NFormItem']
     NIcon: typeof import('naive-ui')['NIcon']
+    NInputNumber: typeof import('naive-ui')['NInputNumber']
     NLayout: typeof import('naive-ui')['NLayout']
     NLayoutContent: typeof import('naive-ui')['NLayoutContent']
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
