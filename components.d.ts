@@ -7,6 +7,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     404: typeof import('./src/views/404/index.vue')['default']
     AliveRouterView: typeof import('./src/components/AliveRouterView.vue')['default']
+    Decimal: typeof import('./src/views/docs/config/decimal.md')['default']
     Decimal_js: typeof import('./src/views/tools/math/decimal_js/index.vue')['default']
     Docs: typeof import('./src/views/docs.vue')['default']
     Gojuon: typeof import('./src/views/tools/jp/gojuon/index.vue')['default']
