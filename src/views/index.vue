@@ -25,6 +25,11 @@
             label: () => h(RouterLink, { to: { path: '/tools' } }, 'tools'),
             key: 'tools',
             icon: renderIcon(Toolbox24Filled)
+        },
+        {
+            label: () => h(RouterLink, { to: { path: '/demo' } }, 'demo'),
+            key: 'demo',
+            icon: renderIcon(Toolbox24Filled)
         }
     ]
 </script>

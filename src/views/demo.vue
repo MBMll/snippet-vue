@@ -1,8 +1,9 @@
 <template>
-    <n-layout style="height: 100vh">
+    <n-layout style="height: 100vh" embedded>
         <n-layout-header></n-layout-header>
-        <n-layout has-sider>
+        <n-layout :has-sider="clientWidth > 480">
             <n-layout-sider
+                v-if="clientWidth > 480"
                 v-model:collapsed="collapsedRef"
                 content-style="padding: 24px;"
                 style="margin-right: 32px"
@@ -11,6 +12,7 @@
                 collapse-mode="transform"
                 :show-collapsed-content="false"
                 :collapsed-width="120"
+                embedded
             >
                 <n-scrollbar>
                     <n-menu
@@ -22,8 +24,9 @@
                 </n-scrollbar>
             </n-layout-sider>
             <n-layout-content
-                style="padding: 30px; width: 100%; height: 100vh; background: #efefef"
+                style="padding: 30px; width: 100%; height: 100vh"
                 :native-scrollbar="false"
+                embedded
             >
                 <n-card
                     hoverable
@@ -46,10 +49,10 @@
 </script>
 
 <script lang="ts" setup>
-    // import 'markdown-it-latex/dist/index.css'
     import router from '@/router'
     import { RouterLink } from 'vue-router'
-
+    console.log(window)
+    const clientWidth = window.document.body.clientWidth
     const collapsedRef = ref(false)
     const route = useRoute()
     const activeMenu: any = computed(() => toRaw(route.name))
@@ -68,8 +71,4 @@
     const routes: any = deepRender(router.options.routes)
     console.log(routes)
 </script>
-
-<style lang="scss" scoped>
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css');
-    // @import url('https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css');
-</style>
+npmn

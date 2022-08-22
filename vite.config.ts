@@ -6,8 +6,14 @@ import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver, VueUseComponentsResolver } from 'unplugin-vue-components/resolvers'
 import WindiCSS from 'vite-plugin-windicss'
 import Markdown from 'vite-plugin-md'
+import code from '@yankeeinlondon/code-builder'
+import link from '@yankeeinlondon/link-builder'
+import meta from '@yankeeinlondon/meta-builder'
 import Pages from 'vite-plugin-pages'
 import Prism from 'markdown-it-prism'
+// import Latex from 'markdown-it-latex'
+// import Katex from 'markdown-it-katex'
+import Katex from './src/plugin/markdown-it-katex'
 
 const defaultClasses = 'prose prose-sm m-auto text-left'
 // https://vitejs.dev/config/
@@ -49,7 +55,7 @@ export default defineConfig(({ mode }) => {
                         axios: [
                             // default imports
                             ['default', 'axios'] // import { default as axios } from 'axios',
-                        ],
+                        ]
                         // '[package-name]': [
                         //     '[import-names]',
                         //     // alias
@@ -74,11 +80,29 @@ export default defineConfig(({ mode }) => {
                 safelist: defaultClasses
             }),
             Markdown({
-                wrapperClasses: defaultClasses,
-                headEnabled: false,
+                // wrapperClasses: defaultClasses,
+                // headEnabled: false,
+                // frontmatterDefaults: {
+                //     requireAuth: false
+                // },
+                // style: {
+                //     baseStyle: 'github'
+                // },
+                // markdownItOptions: {
+                    // html: true,
+                    // linkify: true,
+                    // typographer: true
+                // },
+                // markdownItUses: [Prism, Latex]
                 markdownItSetup(md) {
                     // prismjs.com/
-                    https: md.use(Prism)
+                    // md.use(require('markdown-it-prism'))
+                    // md.use(require('markdown-it-latex'))
+                    md.use(Prism)
+                    // console.log(Object.keys(md),md.helpers,md.renderer,md.options)
+                    // md.use(Latex)
+                    md.use(Katex)
+                    // md.use(Latex2Img)
                     // 为 md 中的所有链接设置为 新页面跳转
                     // md.use(LinkAttributes, {
                     //   matcher: (link: string) => /^https?:\/\//.test(link),
@@ -88,6 +112,13 @@ export default defineConfig(({ mode }) => {
                     //   },
                     // });
                 }
+                // builders: [
+                //     meta(),
+                //     link(),
+                //     code({
+                //         theme: 'base'
+                //     })
+                // ]
             }),
             Pages({
                 dirs: [

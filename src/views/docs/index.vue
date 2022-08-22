@@ -15,6 +15,7 @@
     </n-list>
 </template>
 <script lang="ts" setup>
+    
     import { IosArrowRtl24Filled } from '@vicons/fluent'
     const router = useRouter()
     const route = useRoute()

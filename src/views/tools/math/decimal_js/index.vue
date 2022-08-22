@@ -35,9 +35,11 @@
 
 <script lang="ts" setup>
     import { reactive } from 'vue'
-    // import Decimal from 'decimal.js'
+    import Decimal from 'decimal.js'
     import { add, sub, mul, div } from '@/utils/decimal'
     const formReact: any = reactive({ first: 0.3, second: 0.2 })
+    const x = Decimal.sub(formReact.first,formReact.second)
+    console.log(Decimal.sub(formReact.first,formReact.second),Number(x))
     // const add = (first, second) => Decimal.add(first, second)
     // const sub = (first, second) => Decimal.sub(first, second)
     // const mul = (first, second) => Decimal.mul(first, second)
