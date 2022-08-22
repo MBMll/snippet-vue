@@ -17,6 +17,7 @@ declare module '@vue/runtime-core' {
     InitProject: typeof import('./src/views/docs/config/init-project.md')['default']
     NCard: typeof import('naive-ui')['NCard']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
+    NDataTable: typeof import('naive-ui')['NDataTable']
     NLayout: typeof import('naive-ui')['NLayout']
     NLayoutContent: typeof import('naive-ui')['NLayoutContent']
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
@@ -27,6 +28,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SpaceAnalyticGeometry: typeof import('./src/views/docs/maths/Space-Analytic-Geometry.md')['default']
+    TableWidthResize: typeof import('./src/views/demo/TableWidthResize/index.vue')['default']
     Tools: typeof import('./src/views/tools.vue')['default']
     Undefined: typeof import('./src/views/index.vue')['default']
   }

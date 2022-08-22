@@ -51,7 +51,7 @@
 <script lang="ts" setup>
     import router from '@/router'
     import { RouterLink } from 'vue-router'
-    console.log(window)
+    // console.log(window)
     const clientWidth = window.document.body.clientWidth
     const collapsedRef = ref(false)
     const route = useRoute()
@@ -69,6 +69,6 @@
             )
     }
     const routes: any = deepRender(router.options.routes)
-    console.log(routes)
+    // console.log(routes)
 </script>
 npmn
