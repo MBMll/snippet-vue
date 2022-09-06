@@ -72,4 +72,14 @@
 <style lang="scss" scoped>
     @import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.0/katex.min.css');
     // @import url('https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css');
+
+    ::v-deep(.katex-display > .katex) {
+        white-space: break-spaces;
+    }
+    ::v-deep(a) {
+        color: #0969da;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 </style>

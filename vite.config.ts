@@ -80,25 +80,26 @@ export default defineConfig(({ mode }) => {
                 safelist: defaultClasses
             }),
             Markdown({
-                // wrapperClasses: defaultClasses,
-                // headEnabled: false,
+                wrapperClasses: defaultClasses,
+                headEnabled: false,
                 // frontmatterDefaults: {
-                //     requireAuth: false
+                    // requireAuth: false
                 // },
                 // style: {
                 //     baseStyle: 'github'
                 // },
-                // markdownItOptions: {
-                    // html: true,
-                    // linkify: true,
-                    // typographer: true
-                // },
+                markdownItOptions: {
+                    html: true,
+                    linkify: true,
+                    typographer: true
+                },
                 // markdownItUses: [Prism, Latex]
                 markdownItSetup(md) {
                     // prismjs.com/
                     // md.use(require('markdown-it-prism'))
                     // md.use(require('markdown-it-latex'))
                     md.use(Prism)
+                    md.use(require('markdown-it-anchor'))
                     // console.log(Object.keys(md),md.helpers,md.renderer,md.options)
                     // md.use(Latex)
                     md.use(Katex)

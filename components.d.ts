@@ -17,13 +17,17 @@ declare module '@vue/runtime-core' {
     InitProject: typeof import('./src/views/docs/config/init-project.md')['default']
     NCard: typeof import('naive-ui')['NCard']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
-    NDataTable: typeof import('naive-ui')['NDataTable']
+    NGi: typeof import('naive-ui')['NGi']
+    NGrid: typeof import('naive-ui')['NGrid']
+    NIcon: typeof import('naive-ui')['NIcon']
+    NInput: typeof import('naive-ui')['NInput']
     NLayout: typeof import('naive-ui')['NLayout']
     NLayoutContent: typeof import('naive-ui')['NLayoutContent']
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
     NLayoutSider: typeof import('naive-ui')['NLayoutSider']
     NMenu: typeof import('naive-ui')['NMenu']
     NScrollbar: typeof import('naive-ui')['NScrollbar']
+    NText: typeof import('naive-ui')['NText']
     PatchPackage: typeof import('./src/views/docs/config/patch-package.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
@@ -31,6 +35,7 @@ declare module '@vue/runtime-core' {
     TableWidthResize: typeof import('./src/views/demo/TableWidthResize/index.vue')['default']
     Tools: typeof import('./src/views/tools.vue')['default']
     Undefined: typeof import('./src/views/index.vue')['default']
+    Xicon: typeof import('./src/views/demo/xicon/index.vue')['default']
   }
 }
 

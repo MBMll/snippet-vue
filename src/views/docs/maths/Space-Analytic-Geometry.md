@@ -132,4 +132,102 @@ $$
 
 >2) $(x^2-12x+36) + (y^2 + 4y +4) + (z^2-6z+9) = 49 \Rightarrow O = (6,-2,3), R = 7$
 
+>3) $(x^2-2x+1)+(y^2+4y+4)+(z^2-4z+4)=7+1+4+4 \Rightarrow (x+1)^2+(y+2)^2+(z-2)^2 = 16 , O = (1,-2,2), R = 4$
+6.
+>1) 柱面, 椭圆, 准线: $O_{xy}$平面, 母线: $y$轴
+>2) 柱面, 双曲线, 准线: $O_{xy}$平面, 母线: $z$轴
+>3) 柱面, 抛物线, 准线: $O_{yz}$平面, 母线: $x$轴
+>4) 柱面, 直线, 准线: $O_{yz}$平面, 母线: $x$轴
+>5) 不是
+7.
+>1) $f(\pm\sqrt{x^2+y^2},z)=0$
+>> $y^2 -z =0$
 
+>> $\Rightarrow (\pm\sqrt{x^2+y^2})^2-z = 0$
+
+>> $\Rightarrow x^2+y^2-z=0$
+>2) $(\pm\sqrt{x^2+z^2})^2+y^2=9$
+
+>> $\Rightarrow x^2+y^2+z^2=9$
+>3) $x:4x^2-9y^2-9z^2=36, y: 4x^2-9y^2+4z^2=36$
+
+>4) $x^2+y^2=z^2$
+
+8.
+>1) $O_{xz}$ 上 $3x^2+4z^2=12$ 绕 $z$ 轴, 或 $O_{yz}$ 上 $3y^2+4z^2=12$ 绕 $z$ 轴
+
+>2) $O_{xy}$ 上 $x^2-y^2=1$ 绕 $x$ 轴, 或 $O_{yz}$ 上 $z^2-y^2=1$ 绕 $y$ 轴
+
+>2) $O_{xy}$ 上 $x^2-9y^2=1$ 绕 $x$ 轴, 或 $O_{xz}$ 上 $x^2-9z^2=1$ 绕 $x$ 轴
+
+9.  $x: \begin{cases} y=0 \\ z=0 \end{cases}$ &nbsp;&nbsp;&nbsp; $y: \begin{cases} x=0 \\z=0 \end{cases}$
+10. 
+>1) $x^2+y^2+z^2=4a^2, z\geqslant 0$
+
+>2) $x^2+(y-a)^2=a^2$
+
+11. $x^2+y^2+(1-x)^2=9 \\ \Rightarrow \begin{cases}2x^2-2x + y^2 = 8 \\ z=0 \end{cases}$
+12. $\begin{cases}x^2+y^2=z \\ z=4 \end{cases} \Rightarrow \begin{cases} x^2+y^2=4 \\ z=0 \end{cases}$
+
+#### &sect; 空间中的平面与直线 习题 1-5
+
+1. 
+>1) $\bm{n}\cdot\overrightarrow{P_0P} = A(x-x_0)+B(y-y_0)+C(z-z_0)=0 \\ \Rightarrow 1(x+1)-1(y-2)+2(z-1) = 0 \\ \Rightarrow x-y+2z+1=0$
+
+>2) $0(x-3)+1(y-2)+2(y+1)=0 \\ \Rightarrow y+2z=0$
+2. 由 $Ax+By+Cz+D=0$ 可得
+>1) $5x-3y+0z -(5x_0-3y_0+0z_0)=0 \\ \therefore \bm{n}=\{5,-3,0\}, P_0 = \{8,3,1\}$
+
+>2) $3x+4y+7z-(3x_0+4y_0+7z_0)=0 \\ \therefore \bm{n}=\{3,4,7\}, P_0 = \{-1,-1,-1\}$
+3. 略
+4. $\bm{n}=\{2,-2,1\}$, 
+>设 $x^{\rq}=\{1,0,0\}, \therefore \cos\alpha = \cfrac{\bm{n}\cdot x^{\rq}}{|\bm{n}||x^{\rq}|} = \cfrac{2 \times 1 +0+0}{\sqrt{2^2+2^2+1}\sqrt{1+0+0}}=\cfrac{2}{3}$
+>
+>设 $x^{\rq}=\{0,1,0\}, \therefore \cos\alpha = \cfrac{\bm{n}\cdot x^{\rq}}{|\bm{n}||x^{\rq}|} = \cfrac{0-2 \times 1 +0}{\sqrt{2^2+2^2+1}\sqrt{1+0+0}}= -\cfrac{2}{3}$
+>
+>设 $x^{\rq}=\{0,0,1\}, \therefore \cos\alpha = \cfrac{\bm{n}\cdot x^{\rq}}{|\bm{n}||x^{\rq}|} = \cfrac{0+0+1}{\sqrt{2^2+2^2+1}\sqrt{1+0+0}}= \cfrac{1}{3}$
+5.
+>1) 
+$$
+\begin{cases}
+2A+3B+0C+D=0 \\
+ -2A-3B+4C+D=0 \\
+ 0A+6B+0C+D=0
+\end{cases} 
+\Rightarrow 
+\begin{cases} 6B=-D \\
+ 2A=3B \\
+ 4C=-D 
+\end{cases} 
+\Rightarrow 
+\begin{cases} 3B=2C \Rightarrow A=C=\cfrac{3}{2}B \\
+ -6B=D
+\end{cases}
+\Rightarrow 3x+2y+3z-12=0
+$$
+
+>2) $\begin{cases}\bm{n}\cdot\overrightarrow{Q_1Q_3} = 4A-2B+4C=0 &\textcircled{1} \\ \bm{n}\cdot\overrightarrow{Q_1Q_2} = 5A+4B-C=0 & \textcircled{2} \end{cases} \qquad \Rightarrow \textcircled{1}+\textcircled{2} = 4A-2B+6(5A+4B)=0 \qquad \Rightarrow 17A=-11B \qquad \Rightarrow 55A-68A=11C \\$ 取 $A==11,\: B=17,\: C=13 \Rightarrow 11(x-4)-17(y-2)-13(z-1)=0 \\ \therefore 11x-17y-13z+3=0$ 
+
+$$
+\begin{cases}
+   4A+2B+C+D=0 & \textcircled{1} \\
+   -A--2B+2C+D=0 & \textcircled{2} \\ 
+   4B-5C+D=0 & \textcircled{3}
+\end{cases} 
+ \Rightarrow 
+\begin{cases}
+\textcircled{1}+\textcircled{2} \Rightarrow  5A+4B-C=0 & \textcircled{4} \\
+\textcircled{1}+\textcircled{3} \Rightarrow 4A-2B+4C=0 & \textcircled{6} \\
+\textcircled{2}+\textcircled{3} \Rightarrow -A-6B+7C=0 & \textcircled{8}
+\end{cases} 
+ \Rightarrow 
+\begin{cases}
+\textcircled{3}+\textcircled{4} \Rightarrow  5A+4C-D=0 & \textcircled{5}\\ 
+\textcircled{5}+\textcircled{6} \Rightarrow  A+2B-D=0 & \textcircled{7}\\ 
+\end{cases}
+$$
+
+#### Katex
+
+- [katex support](https://katex.org/docs/supported.html)
+- [latex live](https://www.latexlive.com/)
