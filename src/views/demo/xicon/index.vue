@@ -20,7 +20,7 @@
     import * as all from '@vicons/fluent'
     // console.log(all)
     const formReact = reactive({ qs: '' })
-    const iconsRef = ref([])
+    const iconsRef = ref<Array<any>>([])
     // computed(() => )
     watch(
         [() => formReact.qs],

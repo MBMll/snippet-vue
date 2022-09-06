@@ -9,6 +9,8 @@
     ></n-data-table>
 </template>
 <script lang="ts" setup>
+    import { VNode } from 'vue'
+
     const columns = [
         { title: 'col1', key: 'col1', width: 150, minWidth: 300 },
         { title: 'col2', key: 'col2', width: 150 }
@@ -18,7 +20,7 @@
         { col1: 'noadf;b', col2: '230' }
     ]
     const vResizeWidth = {
-        mounted: (el, binding, vnode, prevVnode) => {
+        mounted: (el: HTMLElement, binding: any, vnode: VNode, prevVnode: VNode) => {
             // console.log(el, binding, vnode, prevVnode)
             // console.log(el.classList, el.className)
             if (
@@ -28,14 +30,14 @@
             ) {
                 return
             }
-            const colGroup =
+            const colGroup: any =
                 el?.childNodes?.[0]?.childNodes?.[0]?.childNodes?.[2]?.childNodes?.[0]
                     ?.childNodes?.[1]?.childNodes?.[0]?.childNodes?.[0].childNodes
             const ths =
                 el?.childNodes?.[0]?.childNodes?.[0]?.childNodes?.[2]?.childNodes?.[0]
                     ?.childNodes?.[1]?.childNodes?.[0]?.childNodes?.[1]?.childNodes?.[0].childNodes
             // console.log(ths)
-            ths.forEach((th, i) => {
+            ths.forEach((th: any, i: number) => {
                 // console.log(th, th.style, i)
                 th.onmousedown = function (event: MouseEvent) {
                     // console.log(arguments, this)
