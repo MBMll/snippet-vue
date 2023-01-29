@@ -1,9 +1,9 @@
 /*
-* @Author: admin
-* @Date:   2022-05-04 16:45:19
-* @Last Modified by:   admin
-* @Last Modified time: 2022-05-04 16:45:26
-*/
+ * @Author: admin
+ * @Date:   2022-05-04 16:45:19
+ * @Last Modified by:   admin
+ * @Last Modified time: 2022-05-04 16:45:26
+ */
 module.exports = {
     printWidth: 100,
     tabWidth: 4,

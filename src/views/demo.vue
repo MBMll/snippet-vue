@@ -71,4 +71,3 @@
     const routes: any = deepRender(router.options.routes)
     // console.log(routes)
 </script>
-npmn
