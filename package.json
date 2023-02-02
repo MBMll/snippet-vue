@@ -25,6 +25,7 @@
     "markdown-it-prism": "^2.2.4",
     "markdown-it-texmath": "^1.0.0",
     "naive-ui": "^2.28.2",
+    "pinia": "^2.0.30",
     "prism-theme-vars": "^0.2.2",
     "sass": "^1.52.0",
     "vue": "^3.2.25",
