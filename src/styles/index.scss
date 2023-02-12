@@ -1,0 +1,83 @@
+/*
+* @Author: admin
+* @Date:   2023-02-12 00:55:34
+* @Last Modified by:   admin
+* @Last Modified time: 2023-02-12 01:05:54
+*/
+
+.container:empty::after {
+  content: "no data";
+}
+
+.demo {
+  // background-clip
+  background-clip: text;
+
+  // :invalid
+  input:invalid {
+    background-color: #ffdddd;
+  }
+
+  form:invalid {
+    border: 5px solid #ffdddd;
+  }
+
+  input:valid {
+    background-color: #ddffdd;
+  }
+
+  form:valid {
+    border: 5px solid #ddffdd;
+  }
+
+  input:required {
+    border-color: #800000;
+    border-width: 3px;
+  }
+
+  input:required:invalid {
+    border-color: #C00000;
+  }
+
+  //  :focus-within
+  form {
+    border: 1px solid;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form:focus-within {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    background-color: beige;
+  }
+
+  //     mix-blend-mode:difference;
+  .mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: difference;
+  }
+
+  .dark {
+    position: relative;
+    left: 6px;
+    height: 24px;
+    width: 24px;
+    background-color: grey;
+    border-radius: 50%;
+  }
+
+  .light {
+    mix-blend-mode: difference;
+    position: relative;
+    left: -6px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 4px solid grey;
+  }
+}
