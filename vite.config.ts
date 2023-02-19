@@ -83,7 +83,7 @@ export default defineConfig(({ mode }) => {
                 wrapperClasses: defaultClasses,
                 headEnabled: false,
                 // frontmatterDefaults: {
-                    // requireAuth: false
+                // requireAuth: false
                 // },
                 // style: {
                 //     baseStyle: 'github'
@@ -152,6 +152,9 @@ export default defineConfig(({ mode }) => {
                     changeOrigin: true, // 允许跨域
                     rewrite: (path) => path.replace('/api/', '/')
                 }
+            },
+            hmr: {
+                overlay: false
             }
         },
         build: {
