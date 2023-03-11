@@ -77,9 +77,9 @@
             showRef.value = true
             nextTick(() => {
                 // showUserOptionRef.value = v
-                setTimeout(() => {
-                    showUserOptionRef.value = v
-                }, 250)
+                // setTimeout(() => {
+                showUserOptionRef.value = v
+                // }, 250)
             })
         }
     }
