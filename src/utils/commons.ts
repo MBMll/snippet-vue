@@ -17,17 +17,17 @@ export const download = debounce((data: Blob | MediaSource, fileName: string) =>
     const download_URL = (window.URL || window.webkitURL).createObjectURL(data)
 
     // Create a tag, simulate click to download
-    const a_link = document.createElement('a')
-    a_link.href = download_URL
+    const link = document.createElement('a')
+    link.href = download_URL
     // Use the download attribute of the a tag to specify the file name
-    a_link.download = fileName
-    document.body.appendChild(a_link)
-    a_link.click()
+    link.download = fileName
+    document.body.appendChild(link)
+    link.click()
 
     setTimeout(function () {
         // Remove temporary file paths in memory and a tags created for download
         URL.revokeObjectURL(download_URL)
-        a_link.remove()
+        link.remove()
     }, 1000)
 })
 
