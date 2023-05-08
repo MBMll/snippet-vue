@@ -1,0 +1,3 @@
+<template>
+    <NTree></NTree>
+</template>
